@@ -14,6 +14,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
         * {
             font-size: 18px;
@@ -23,6 +25,8 @@
         body {
             height: 100vh;
             width: 100%;
+            overflow-x: hidden;
+            margin: 0;
         }
 
         a {
@@ -71,6 +75,7 @@
             .header>.container>.row>div:nth-child(3) {
                 visibility: hidden;
                 transition: visibility linear;
+
             }
 
             .header>.container>.row>div:nth-child(4) {
@@ -92,6 +97,7 @@
             }
 
         }
+
 
         #hello-btn {
             background-color: white;
@@ -553,8 +559,8 @@
                         Hello</button></div>
                 <div class="col-1">
                     <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">+
+                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            <i class="fa fa-bars"></i>
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Mentorship</a></li>
