@@ -54,48 +54,35 @@
             font-size: 40px;
         }
 
-        .header>.container>.row>div:nth-child(1) {
-            visibility: visible;
-            order: -2;
+        .header>.container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .header>.container>.row>div:nth-child(2),
-        .header>.container>.row>div:nth-child(3) {
+        .header>.container>div:nth-child(3) {
             visibility: visible;
-            order: 0;
         }
 
-        .header>.container>.row>div:nth-child(4) {
+        .header>.container>div:nth-child(2) {
             visibility: hidden;
-            order: -1;
-            align-self: center;
         }
 
-        @media (max-width: 1199.98px) {
-            .header>.container>.row>div:nth-child(3) {
-                visibility: hidden;
-                transition: visibility linear;
-
-            }
-
-            .header>.container>.row>div:nth-child(4) {
-                visibility: visible;
-                order: 1;
-            }
+        .fa {
+            font-size: 38px;
         }
 
         @media (max-width: 660px) {
-            .row>div {
-                position: relative;
+            .header>.container>div:nth-child(3) {
+                visibility: hidden;
+                order: 0;
             }
 
-            .dropdown-toggle {
-                position: absolute;
-                top: -20px;
-                right: -20px;
-
+            .header>.container>div:nth-child(2) {
+                visibility: visible;
+                order: 1;
             }
-
         }
 
 
@@ -551,26 +538,19 @@
 <body>
     <section class="header">
         <div class="container text-center">
-            <div class="row">
-                <div class="col-1" id="signature">ARM+</div>
-                <div class="col-7"></div>
-                <div class="col-3"><a href="#">Mentorship</a>&nbsp&nbsp&nbsp&nbsp<button type="button"
-                        id="hello-btn">Say
-                        Hello</button></div>
-                <div class="col-1">
-                    <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Mentorship</a></li>
-                            <li><a class="dropdown-item" href="#">Say Hello</a></li>
-                            <li><a class="dropdown-item" href="#">Other</a></li>
-                        </ul>
-
-                    </div>
-                </div>
+            <div id="signature">ARM+</div>
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Mentorship</a></li>
+                    <li><a class="dropdown-item" href="#">Say Hello</a></li>
+                    <li><a class="dropdown-item" href="#">Other</a></li>
+                </ul>
             </div>
+            <div><a href="#">Mentorship</a>&nbsp&nbsp&nbsp&nbsp<button type="button" id="hello-btn">Say
+                    Hello</button></div>
         </div>
     </section>
     <section class="second-header">
